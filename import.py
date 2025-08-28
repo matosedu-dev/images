@@ -1,6 +1,8 @@
 import requests
 import os
 from urllib.parse import urlparse
+from urls import urls
+
 
 def download_image(url, folder_path="images"):
     try:
@@ -32,11 +34,13 @@ def download_image(url, folder_path="images"):
         return None
 
 # Exemplo de uso
-urls = [
 
-    "https://cambuci.vtexassets.com/arquivos/ids/1505567-1200-auto?v=638774862252200000&width=1200&height=auto&aspect=true",
-    "https://cambuci.vtexassets.com/arquivos/ids/1500865-1200-auto?v=638763652107270000&width=1200&height=auto&aspect=true"
-]
+
+# urls = [
+
+#     "https://cambuci.vtexassets.com/arquivos/ids/1505567-1200-auto?v=638774862252200000&width=1200&height=auto&aspect=true",
+#     "https://cambuci.vtexassets.com/arquivos/ids/1500865-1200-auto?v=638763652107270000&width=1200&height=auto&aspect=true"
+# ]
 
 for url in urls:
     download_image(url)
